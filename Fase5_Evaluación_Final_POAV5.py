@@ -1,3 +1,4 @@
+
 #Importar la librería tkinter
 import tkinter as tk
 
@@ -33,14 +34,12 @@ ventana.config(bg="#f4f6f9")
 
 titulo = tk.Label(
     ventana,
-    text="SISTEMA DE AUDITORÍA DE INVENTARIO",
+    text="REPORTE DE INVENTARIO",
     font=("Arial", 24, "bold"),
     bg="#f4f6f9",
     fg="#cd1417"
 )
-
 titulo.pack(pady=15)
-
 
 # Creacion de la tabla
 frame_tabla = tk.Frame(ventana)
@@ -57,7 +56,6 @@ tabla = ttk.Treeview(
 scroll_y.config(command=tabla.yview)
 
 tabla["columns"] = ("Codigo","Articulo","StockActual","StockMinimo","Estado","CantidadPedir")
-
 tabla.column("#0", width=0, stretch=tk.NO)
 
 tabla.column("Codigo", anchor=tk.CENTER, width=90)
@@ -68,7 +66,6 @@ tabla.column("Estado", anchor=tk.CENTER, width=200)
 tabla.column("CantidadPedir", anchor=tk.CENTER, width=150)
 
 tabla.heading("#0", text="")
-
 tabla.heading("Codigo", text="Código")
 tabla.heading("Articulo", text="Artículo")
 tabla.heading("StockActual", text="Stock actual")
